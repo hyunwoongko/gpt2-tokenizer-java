@@ -15,11 +15,11 @@ testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 
 ## Add tokenizer files to resources directory
 Please add `encoder.json` and `vocab.bpe` files to your project resources directory.
-these files can be found here.
+these files can be found [here](https://github.com/hyunwoongko/gpt2-tokenizer-java/tree/master/src/main/resources/tokenizers/gpt2).
 
 ## Usage
 The following are simple examples of this library.
-To check test code, refer to here.
+To check test code for this, refer to [here](https://github.com/hyunwoongko/gpt2-tokenizer-java/blob/master/src/test/java/ai/tunib/tokenizer/GPT2TokenizerTest.java).
 
 ### Encoding text to tokens
 ```java
