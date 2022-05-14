@@ -36,10 +36,9 @@ List<Integer> result = tokenizer.encode("Hello my name is Kevin.");
 ### Decoding tokens to text
 ```java
 import ai.tunib.tokenizer.GPT2Tokenizer;
-import java.util.List;
 
 GPT2Tokenizer tokenizer = GPT2Tokenizer.fromPretrained("PATH/IN/RESOURCES");
-List<Integer> result = tokenizer.decode(List.of(15496, 616, 1438, 318, 7939, 13));
+String result = tokenizer.decode(List.of(15496, 616, 1438, 318, 7939, 13));
 ```
 ```
 "Hello my name is Kevin."
