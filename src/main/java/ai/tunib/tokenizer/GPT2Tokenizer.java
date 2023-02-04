@@ -186,7 +186,7 @@ public class GPT2Tokenizer {
         while (matcher.find()) {
             String match = matcher.group();
             StringBuilder unicodeBuilder = new StringBuilder();
-            for (byte b : StandardCharsets.UTF_8.encode(match).array()) {
+            for (byte b : match.getBytes(StandardCharsets.UTF_8)) {
                 unicodeBuilder.append(this.byte2unicode.get((int)b));
             }
             unicodes.add(unicodeBuilder.toString());
