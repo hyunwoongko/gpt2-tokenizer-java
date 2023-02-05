@@ -8,6 +8,9 @@ public class GPT2TokenizerTest {
     private final String encodingExample = "Hello my name is Kevin.";
     private final List<Integer> decodingExample = List.of(15496, 616, 1438, 318, 7939, 13);
 
+    private final String encodingLongTextExample = "interesting";
+    private final List<Integer> decodingLongTextExample = List.of(47914);
+
     @Test
     public void testEncoding() {
         GPT2Tokenizer tokenizer = GPT2Tokenizer.fromPretrained("tokenizers/gpt2");
@@ -20,5 +23,12 @@ public class GPT2TokenizerTest {
         GPT2Tokenizer tokenizer = GPT2Tokenizer.fromPretrained("tokenizers/gpt2");
         String result = tokenizer.decode(decodingExample);
         Assertions.assertEquals(encodingExample, result);
+    }
+
+    @Test
+    public void testLongWord() {
+        GPT2Tokenizer tokenizer = GPT2Tokenizer.fromPretrained("tokenizers/gpt2");
+        List<Integer> result = tokenizer.encode(encodingLongTextExample);
+        Assertions.assertEquals(decodingLongTextExample, result);
     }
 }
